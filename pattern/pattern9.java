@@ -48,7 +48,7 @@ public class pattern9 {
   public static void main(String[] args) {
     System.out.println("Pattern 9");
     int n = 5;
-    // top(n);
+    top(n);
     bottom(n);
   }
 }
