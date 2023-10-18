@@ -26,7 +26,7 @@ public class pattern10 {
   public static void main(String[] args) {
     System.out.println("Pattern 10");
     int n = 5;
-    // top(n);
+    top(n);
     bottom(n);
   }
 }
