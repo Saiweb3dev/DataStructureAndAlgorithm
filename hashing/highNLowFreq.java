@@ -6,7 +6,7 @@ import java.util.Map;
 //finding the highest and lowest frequency number and if there are similar freq then print the lowest
 public class highNLowFreq {
   public static void main(String[] args) {
-    System.out.println("High and low frequency value");
+    System.out.println("High and low frequency value sorting");
     int v[] = {1,2,2,2,2,1,3};
     int n = v.length;
     HashMap<Integer,Integer> maparr=new HashMap<>();
