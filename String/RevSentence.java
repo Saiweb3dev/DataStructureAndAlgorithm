@@ -8,13 +8,13 @@ public class RevSentence {
     for(int i=words.length-1;i>=0;i--)
     {
     revStr.append(words[i]+" ");
-    System.out.println(words[i]);
     }
     return revStr.toString().trim();
   }
   public static void main(String[] args) {
     System.out.println("Strings reversing in a sentence");
     String str = "Hello My Name is Sai Kumar";
+    System.out.println(str);
     System.out.println(RevString(str));
   }
 }
