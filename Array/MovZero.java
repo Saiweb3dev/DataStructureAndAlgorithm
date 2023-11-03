@@ -13,27 +13,21 @@ public class MovZero {
     {
       System.out.print(arr[i]);
     }
-    //creating a list 
-    ArrayList <Integer>TempArr = new ArrayList<>();
-    //adding the non zero element to the List
+    int j =0;
+    //moving the value other than 0 
     for(int i=0;i<n;i++)
     {
-      if(arr[i]!=0)
-      {
-        TempArr.add(arr[i]);
-      }
-    }
-    //adding 0 to last by filling remaining size of tempArr till n
-    int m = TempArr.size();
-    for(int i=m;i<n;i++)
-    {
-      TempArr.add(0);
-    }
+      if(arr[i] != 0)
+      arr[j++] = arr[i];
+    } 
+    //filling remaining with 0
+    for(;j<n;j++) arr[j] = 0;
+    
     //printing the value
     System.out.println("After the Logic");
     for(int i=0;i<n;i++)
     {
-      System.out.print(TempArr.get(i));
+      System.out.print(arr[i]);
     }
   }
 }
