@@ -14,12 +14,7 @@ public class LowBound {
     while(low<=high)
     {
       int mid = (low+high)/2;
-      if(arr[mid] == target)
-      {
-        index = mid;
-        break;
-      }
-      else if(arr[mid]>=target)
+     if(arr[mid]>=target)
       {
         high = mid-1;
         index = mid;
