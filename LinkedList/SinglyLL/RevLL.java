@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.SinglyLL;
 
 public class RevLL {
   public static void main(String[] args) {
