@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.SinglyLL;
 import java.util.*;
 public class BasicLL {
   public static void main(String[] args) {
