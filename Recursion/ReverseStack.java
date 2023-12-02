@@ -12,7 +12,7 @@ public class ReverseStack
     return reversedStack(stack, dummy);
   }
   public static void main(String[] args) {
-    System.out.println("Reverse Stack using Recursion");
+    System.out.println("Reverse Stack using Recursion ");
     Integer arr[] = {1,2,3,4,5};
     Stack <Integer>stack = new Stack<>();
     //before
