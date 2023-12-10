@@ -1,4 +1,4 @@
-package Array;
+package easy;
 
 public class MaxCon {
   public static void main(String[] args) {
