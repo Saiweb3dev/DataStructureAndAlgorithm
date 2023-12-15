@@ -1,4 +1,4 @@
-package medium.Two_Dimensional;
+
 public class SetZeroMatrix {
   public static void main(String[] args) {
     System.out.println("Set Zero matrix");
