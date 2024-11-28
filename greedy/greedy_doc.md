@@ -49,3 +49,78 @@ The Fractional Knapsack problem involves selecting items with given weights and 
     2. Take the second item fully (value = 100, weight = 20).
     3. Take 2/3 of the third item (value = 80, weight = 20).
 - **Output**: Total value = 240.
+
+<hr style="border: none; height: 4px; background-color: cyan;">
+
+## Problem 3 Explanation - Lemonade Change
+
+### Problem Statement
+The problem involves determining whether you can provide the correct change to all customers in a lemonade stand. Each customer pays either `$5`, `$10`, or `$20` for a lemonade, which costs `$5`. You start with no money, and you must provide the correct change for each customer in the order they arrive.
+
+- If a customer pays `$5`, you don't need to return any change.
+- If a customer pays `$10`, you need to return `$5` as change.
+- If a customer pays `$20`, you can return either:
+  - `$10` and `$5`, or
+  - Three `$5` bills, if `$10` is not available.
+
+The goal is to determine if it's possible to provide correct change for all customers.
+
+---
+
+### Approach
+1. **Initialization**: Use three variables (`bill5`, `bill10`, `bill20`) to keep track of the number of `$5`, `$10`, and `$20` bills you have.
+2. **Iterate Through Bills**: For each customer's payment:
+   - If `$5`, increase `bill5` count.
+   - If `$10`, check if `bill5` is available for change. If yes, decrement `bill5` and increment `bill10`.
+   - If `$20`, prioritize giving `$10` and `$5` as change. If not possible, give three `$5` bills.
+3. **Validation**: If at any point you cannot provide the correct change, return `False`.
+
+---
+
+### Example
+#### Input
+
+bills = [5, 5, 5, 10, 20]
+
+<hr style="border: none; height: 4px; background-color: cyan;">
+
+## Problem 4 Explanation - Valid Parenthesis String
+
+### Problem Statement
+The problem involves determining whether a string containing `(`, `)`, and `*` is valid:
+- `(` must be closed by a corresponding `)`.
+- `*` can be treated as:
+  - An opening parenthesis `(`.
+  - A closing parenthesis `)`.
+  - An empty string (ignored).
+- The string must be valid at every point.
+
+---
+
+### Approach
+
+This problem is solved using a **range-based greedy algorithm**:
+1. **Tracking Open Parentheses**:
+   - Use two variables, `low` and `high`:
+     - `low`: Minimum possible open parentheses.
+     - `high`: Maximum possible open parentheses.
+
+2. **Updating for Each Character**:
+   - For `(`: Increment both `low` and `high`.
+   - For `)`: Decrement both `low` and `high`. Ensure `low` doesn't go below 0.
+   - For `*`:
+     - Treat it as `)` by decreasing `low`.
+     - Treat it as `(` by increasing `high`.
+
+3. **Validation**:
+   - At any point, if `high` becomes negative, return `False` (too many `)`).
+   - At the end, check if `low == 0` (all open parentheses are closed).
+
+---
+
+### Example
+
+#### Input:
+s = "(*))"
+
+
