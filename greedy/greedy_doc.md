@@ -123,4 +123,55 @@ This problem is solved using a **range-based greedy algorithm**:
 #### Input:
 s = "(*))"
 
+<hr style="border: none; height: 4px; background-color: cyan;">
+
+## Problem 5 Statement
+**You are given the start and end times of n meetings as two arrays: start and end. Your task is to determine the maximum number of meetings that can be accommodated in a single meeting room, such that:**
+
+Only one meeting can be held at a time.
+The start time of a meeting cannot be equal to or earlier than the end time of the previous meeting.
+### Approach
+This problem is solved using a greedy algorithm:
+
+Pair Start and End Times:
+
+Combine the start and end times into a list of tuples.
+Sort Meetings:
+
+Sort the meetings by their end times (primary criterion).
+If two meetings have the same end time, sort by their start time (secondary criterion).
+### Select Meetings:
+
+Initialize lastEnd as -1 to track the end time of the last selected meeting.
+Iterate through the sorted list of meetings:
+If the current meeting's start time is greater than lastEnd, select it.
+Update lastEnd to the current meeting's end time.
+Return the Count:
+
+The total number of selected meetings is the result.
+### Example
+Input:
+
+python
+Copy code
+start = [1, 3, 2, 5, 8, 5]
+end = [2, 4, 3, 7, 9, 9]
+
+**Execution Steps:**
+Pair start and end times:
+meetings = [(1, 2), (3, 4), (2, 3), (5, 7), (8, 9), (5, 9)]
+
+Sort by end times:
+meetings = [(1, 2), (2, 3), (3, 4), (5, 7), (8, 9), (5, 9)]
+
+**Select meetings:**
+
+Select (1, 2): lastEnd = 2
+Select (2, 3): Skip (start time ≤ lastEnd).
+Select (3, 4): lastEnd = 4
+Select (5, 7): lastEnd = 7
+Select (5, 9): Skip (start time ≤ lastEnd).
+Select (8, 9): lastEnd = 9
+Total meetings selected: 4
+
 
